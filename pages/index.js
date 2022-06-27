@@ -1,27 +1,13 @@
-import Link from 'next/link';
-import {useRouter} from 'next/router'
+import Link from "next/link"
 function Home(){
-  const router = useRouter();
+  
+  return <>
+    <h1>Next JS pre=rendering</h1>
+    <Link href="/users">
+      <a>Users</a>
+    </Link>
+  </>
 
-  const handleCLick = () =>{
-    console.log('Placing your order');
-    router.push('/product');
-  }
-
-  return (
-      <div>
-        <h1>Home Page</h1>
-        <Link href="/blog">
-        <a>Blog</a>
-        </Link>
-        <Link href="/product">
-          <a>Product</a>
-        </Link>
-        <button onClick={handleCLick}>
-          Place Order
-        </button>
-      </div>
-    )
 }
 
 export default Home
