@@ -39,7 +39,7 @@ export async function getStaticPaths(){
     // const paths = data.map(post=>{
     //     return{
     //         params:{
-    //             postId:`${post.id}`
+    //             productId:`${post.id}`
     //         }
     //     }
     // })
