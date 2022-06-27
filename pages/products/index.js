@@ -2,18 +2,16 @@ function ProductList({products}){
     return(
         <>
             <h1>List of product</h1>
-            {
-                products.map(product=>{
-                    return(
-                        <div key={product.id}>
-                            <h2>
-                                {product.id} {product.title} {product.price}
-                            </h2>
-                            <hr/>
-                        </div>
-                    )
-                })
-            }
+            {products.map(product=>{
+                return(
+                    <div key={product.id}>
+                        <h2>
+                            {product.id} {product.title} {product.price}
+                        </h2>
+                        <hr/>
+                    </div>
+                )
+            })}
         </>
     )
 }
@@ -25,8 +23,8 @@ export async function getStaticProps(){
 
     return {
         props:{
-            product:data,
+            products:data,
         },
-        revalidate: 30
+        revalidate: 30,
     }
 }
